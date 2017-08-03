@@ -32,4 +32,4 @@ C:\pacakgetotxt --inputdir C:\sfdc-src-project1 --pattern *package.xml
 
 
 ## TODO 
-Better documentation, listing and explaining each arguments.
+1. Produce a cross platform version of this app.
