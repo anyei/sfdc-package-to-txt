@@ -24,11 +24,11 @@ C:\pacakgetotxt --inputdir C:\sfdc-src-project1 --pattern *package.xml
 
 | name              | description |
 |-------------------|-------------|
-| --inputdir        |             |
-| --outputdir       |             |
-| --outputfilename  |             |
-| --pattern         |             |
-| --outputextension |             |
+| --inputdir        |This is where the program will search into.|
+| --outputdir       |This is where the program will produce the output components.txt file.|
+| --outputfilename  |This is to change the output file name. By default is Components|
+| --pattern         |This is to change the search pattern, by default is pacakge.xml which will search for that file, but you could use any bash(dos) pattern here, for example *.xml or *package.xml.|
+| --outputextension |This is to change the output file extension, by default is .txt.|
 
 
 ## TODO 
