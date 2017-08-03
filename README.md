@@ -32,7 +32,7 @@ C:\pacakgetotxt --inputdir C:\sfdc-src-project1 --pattern *package.xml
 
 
 ### As Environment variable
-In all my samples above, i have this little program as environment variable. You just have to edit the "Path" entry for the "System Variables" section, add your folder location of this program. I would recommend you to rename the program to be lowercase like i did.
+In all my samples above, i have this little program as environment variable on Windows 10. You just have to edit the "Path" entry for the "System Variables" section, add your folder location of this program. I would recommend you to rename the program to be lowercase like i did.
 
 ## TODO 
 1. Produce a cross platform version of this app.
