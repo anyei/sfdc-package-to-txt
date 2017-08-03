@@ -31,5 +31,8 @@ C:\pacakgetotxt --inputdir C:\sfdc-src-project1 --pattern *package.xml
 | --outputextension |This is to change the output file extension, by default is .txt.|
 
 
+### As Environment variable
+In all my samples above, i have this little program as environment variable. You just have to edit the "Path" entry for the "System Variables" section, add your folder location of this program. I would recommend you to rename the program to be lowercase like i did.
+
 ## TODO 
 1. Produce a cross platform version of this app.
