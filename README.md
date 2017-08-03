@@ -20,6 +20,15 @@ This will get all the xml in the folder C:\sfdc-src-project1 where the name ends
 C:\pacakgetotxt --inputdir C:\sfdc-src-project1 --pattern *package.xml
 ```
 
+### Table of arguments
+
+| name              | description |
+|-------------------|-------------|
+| --inputdir        |             |
+| --outputdir       |             |
+| --outputfilename  |             |
+| --pattern         |             |
+| --outputextension |             |
 
 
 ## TODO 
