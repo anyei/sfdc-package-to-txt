@@ -24,6 +24,7 @@ C:\pacakgetotxt --inputdir C:\sfdc-src-project1 --pattern *package.xml
 
 | name              | description |
 |-------------------|-------------|
+| --dir        |To make easier when you want to place the output file in the same file as the source package.xml file.|
 | --inputdir        |This is where the program will search into.|
 | --outputdir       |This is where the program will produce the output components.txt file.|
 | --outputfilename  |This is to change the output file name. By default is Components|
@@ -33,6 +34,9 @@ C:\pacakgetotxt --inputdir C:\sfdc-src-project1 --pattern *package.xml
 
 ### As Environment variable
 In all my samples above, i have this little program as environment variable on Windows 10. You just have to edit the "Path" entry for the "System Variables" section, add your folder location of this program. I would recommend you to rename the program to be lowercase like i did.
+
+# DOTNET CORE
+A dotnet core version of this app has been released, you can find the src-dotnet-core folder. The bin contains the compiled version, the arguments are pretty much the same as the original .net app. I have not tried on linux yet but will try to do it soon.
 
 ## TODO 
 1. Produce a cross platform version of this app.
