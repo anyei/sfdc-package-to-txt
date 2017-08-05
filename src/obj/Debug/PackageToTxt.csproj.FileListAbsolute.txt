@@ -4,3 +4,8 @@ c:\users\the pc\documents\visual studio 2015\Projects\PackageToTxt\PackageToTxt\
 c:\users\the pc\documents\visual studio 2015\Projects\PackageToTxt\PackageToTxt\obj\Debug\PackageToTxt.csprojResolveAssemblyReference.cache
 c:\users\the pc\documents\visual studio 2015\Projects\PackageToTxt\PackageToTxt\obj\Debug\PackageToTxt.exe
 c:\users\the pc\documents\visual studio 2015\Projects\PackageToTxt\PackageToTxt\obj\Debug\PackageToTxt.pdb
+C:\Users\the pc\Documents\Projects\OpenSource\dotnet\sfdc-package-to-txt\src\bin\Debug\packagetotxt.exe.config
+C:\Users\the pc\Documents\Projects\OpenSource\dotnet\sfdc-package-to-txt\src\bin\Debug\packagetotxt.exe
+C:\Users\the pc\Documents\Projects\OpenSource\dotnet\sfdc-package-to-txt\src\bin\Debug\packagetotxt.pdb
+C:\Users\the pc\Documents\Projects\OpenSource\dotnet\sfdc-package-to-txt\src\obj\Debug\packagetotxt.exe
+C:\Users\the pc\Documents\Projects\OpenSource\dotnet\sfdc-package-to-txt\src\obj\Debug\packagetotxt.pdb

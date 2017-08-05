@@ -7,8 +7,8 @@
     <ProjectGuid>{E7AB35E4-D499-4863-B051-660744322710}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>PackageToTxt</RootNamespace>
-    <AssemblyName>PackageToTxt</AssemblyName>
+    <RootNamespace>packagetotxt</RootNamespace>
+    <AssemblyName>packagetotxt</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

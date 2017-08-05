@@ -1,33 +1,31 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+using Microsoft.Extensions.Configuration;
 using System.Xml;
 using System.IO;
+using System.Text;
+using System.Collections.Generic;
+using System.Xml.XPath;
 
-namespace PackageToTxt
+namespace packagetotxt
 {
-    /*
-     * Created By : anyei
-     * Created Date : 7/31/2017
-     * Github: https://github.com/anyei/sfdc-package-to-txt
-     * By a given sfdc package xml file, generates a txt file with a list of the types members.
-     * For the people that doesn't like to read the package file in the xml format.
-     */
     class Program
     {
+    	public static IConfigurationRoot Config {get;set;}
+    	static Program(){
+    		loadConfig();
+    	}
+        
         static void Main(string[] args)
         {
-            string outputDir = getSetting("defaultOutputDir");
-            
-            string inputDir = Environment.CurrentDirectory;
-            outputDir = string.IsNullOrEmpty(outputDir) ? Environment.CurrentDirectory : outputDir;
-
+        	string outputDir = Config != null ? Config["defaultOutputDir"] : "";
+            outputDir = string.IsNullOrEmpty(outputDir) ? Directory.GetCurrentDirectory() : outputDir;            
+            string inputDir = Directory.GetCurrentDirectory();
             string dir = null;
-            string componentFileName = getSetting("outputFileName");
-            string outputFileExtension = getSetting("outputFileExtension");
-            string pattern = getSetting("defaultSearchPattern");
 
+            string componentFileName = Config != null ? Config["outputFileName"] : null;
+            string outputFileExtension =Config != null ? Config["outputFileExtension"] : null;
+            string pattern = Config != null ? Config["defaultSearchPattern"] : null;
+            Console.WriteLine(pattern);
             Dictionary<string, string> arguments = new Dictionary<string, string>();
             bool optionStart = false;
             string prevArg = "";
@@ -50,7 +48,6 @@ namespace PackageToTxt
             outputDir = arguments.ContainsKey("--outputdir") ? arguments["--outputdir"] : outputDir;
             inputDir = arguments.ContainsKey("--inputdir") ? arguments["--inputdir"] : inputDir;
             dir = arguments.ContainsKey("--dir") ? arguments["--dir"] : dir;
-
             outputDir = !string.IsNullOrEmpty(dir) ? dir : outputDir;
             inputDir = !string.IsNullOrEmpty(dir) ? dir : inputDir;
 
@@ -83,7 +80,6 @@ namespace PackageToTxt
                     {
                         physicalFile.Write(bts, 0, bts.Length);
                         physicalFile.Flush();
-                        physicalFile.Close();
                         filesGenerated.Add(componentFileWithNumber + outputFileExtension);
                     }
                 }
@@ -96,18 +92,18 @@ namespace PackageToTxt
         {
             string txtContentResult = "";
             List<string> typesResult = new List<string>();
-            System.Xml.XmlDocument doc = new System.Xml.XmlDocument();
+            XmlDocument doc = new XmlDocument();
+            FileStream fs = File.OpenRead(filePath);
             try
             {
-                doc.Load(filePath);
-            }
-            catch (Exception err) { Console.WriteLine("Not an xml file: " + filePath); return ""; }
+                doc.Load(fs);
+            }catch(Exception err) { Console.WriteLine("Not an xml file: "+filePath); return ""; }
             XmlElement root = doc.DocumentElement;
 
             XmlNamespaceManager nsmgr = new XmlNamespaceManager(root.OwnerDocument.NameTable);
             nsmgr.AddNamespace("x", root.OwnerDocument.DocumentElement.NamespaceURI);
 
-            XmlNodeList types = root.SelectNodes("//x:types", nsmgr);
+            XmlNodeList types =root.SelectNodes("//x:types", nsmgr);
 
             if(types != null)
                 foreach (XmlNode node in types)
@@ -129,10 +125,15 @@ namespace PackageToTxt
             return txtContentResult;
             
         }
-        static string getSetting(string settingName)
-        {
-            return System.Configuration.ConfigurationManager.AppSettings.AllKeys.Contains(settingName) ?
-                System.Configuration.ConfigurationManager.AppSettings[settingName] : "";
+        static void loadConfig(){
+
+            try
+            {
+                var builder = new ConfigurationBuilder()
+                    .AddJsonFile("appsettings.json");
+                Config = builder.Build();
+            }catch(Exception err) { Console.WriteLine("No appsettings.json or bad format"); }
         }
+
     }
 }

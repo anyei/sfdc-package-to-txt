@@ -1,0 +1,9 @@
+C:\Users\the pc\Documents\Projects\OpenSource\dotnet\src\packagetotxt\bin\Debug\netcoreapp1.1\packagetotxt.deps.json
+C:\Users\the pc\Documents\Projects\OpenSource\dotnet\src\packagetotxt\bin\Debug\netcoreapp1.1\packagetotxt.runtimeconfig.json
+C:\Users\the pc\Documents\Projects\OpenSource\dotnet\src\packagetotxt\bin\Debug\netcoreapp1.1\packagetotxt.runtimeconfig.dev.json
+C:\Users\the pc\Documents\Projects\OpenSource\dotnet\src\packagetotxt\bin\Debug\netcoreapp1.1\packagetotxt.dll
+C:\Users\the pc\Documents\Projects\OpenSource\dotnet\src\packagetotxt\bin\Debug\netcoreapp1.1\packagetotxt.pdb
+C:\Users\the pc\Documents\Projects\OpenSource\dotnet\src\packagetotxt\obj\Debug\netcoreapp1.1\packagetotxt.AssemblyInfo.cs
+C:\Users\the pc\Documents\Projects\OpenSource\dotnet\src\packagetotxt\obj\Debug\netcoreapp1.1\packagetotxt.dll
+C:\Users\the pc\Documents\Projects\OpenSource\dotnet\src\packagetotxt\obj\Debug\netcoreapp1.1\packagetotxt.pdb
+C:\Users\the pc\Documents\Projects\OpenSource\dotnet\src\packagetotxt\obj\Debug\netcoreapp1.1\packagetotxt.csprojResolveAssemblyReference.cache
