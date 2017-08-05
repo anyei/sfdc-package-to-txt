@@ -39,4 +39,4 @@ In all my samples above, i have this little program as environment variable on W
 A dotnet core version of this app has been released, you can find the src-dotnet-core folder. The bin contains the compiled version, the arguments are pretty much the same as the original .net app. I have not tried on linux yet but will try to do it soon.
 
 ## TODO 
-1. Produce a cross platform version of this app.
+1. ~~Produce a cross platform version of this app.~~
