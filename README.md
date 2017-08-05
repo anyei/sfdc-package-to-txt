@@ -24,7 +24,7 @@ C:\pacakgetotxt --inputdir C:\sfdc-src-project1 --pattern *package.xml
 
 | name              | description |
 |-------------------|-------------|
-| --dir        |To make easier when you want to place the output file in the same file as the source package.xml file.|
+| --dir        |To make easier when you want to place the output file in the same folder as the source package.xml file.|
 | --inputdir        |This is where the program will search into.|
 | --outputdir       |This is where the program will produce the output components.txt file.|
 | --outputfilename  |This is to change the output file name. By default is Components|
